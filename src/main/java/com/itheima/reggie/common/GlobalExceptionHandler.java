@@ -31,4 +31,14 @@ public class GlobalExceptionHandler {
 
 
     }
+
+    @ExceptionHandler(CustomException.class)
+    public R<String> exceptionHandler(CustomException exception){
+        log.error(exception.getMessage());
+
+
+            return R.error(exception.getMessage());
+
+
+    }
 }
