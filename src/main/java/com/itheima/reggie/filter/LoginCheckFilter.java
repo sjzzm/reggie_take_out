@@ -36,11 +36,14 @@ public class LoginCheckFilter implements Filter {
                 "/employee/logout",
                 "/backend/**",
                 "/front/**",
-                "/common/**"
+                "/common/**",
+                "/user/sendMsg",
+                "/user/login"
         };
 
         //2.判断本次请求是否需要处理
         boolean check = check(urls, requestURI);
+
 
         //3.如果不需要处理，直接放行
         if(check){
